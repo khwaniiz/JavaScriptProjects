@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    
+}
+
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute;
+    left: 80px;
+}
+
+.border-left {
+    width: 80px;
+    height: 790px;
+    position:  absolute;
+    background-color: white;
+    z-index: +2;
+}
+
+.border-right {
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 580px;
+}
+
+.border-top {
+    width: 660px;
+    height: 50px;
+    position:  absolute;
+    background-color: white;
+    z-index: +2;
+    top: -50px;
+}
+
+.sky {
+    background-image: url('fb-game-background.png');
+    width: 500px;
+    height: 580px;
+    position: absolute;
+    
+    
+}
+
+.ground {
+    background-image: url('bottom-background.png');
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 580px;
+    z-index: +3;
+}
+
+.bird {
+    background-image: url('flappy-bird.png');
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    left: 220px;
+    bottom: 100px;
+}
+
+.obstacle {
+    background-image: url('flappybird-pipe.png');
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+.obstacleTop {
+    background-image: url('flappybird-pipe.png');
+    transform: rotate(180deg);
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+@keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+  
+  @-webkit-keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+
+  .ground-container {
+      height: 150px;
+     width: 500px;
+      left: 80px;
+      width: 100%;
+      position:  absolute;
+      z-index: 1;
+  }
+  
+  .ground-moving {
+    position: absolute;
+    top: 580px;
+    height: 150px;
+
+    background-image: url('bottom-background.png');
+    background-repeat: repeat-x;
+    animation: slideright 100s infinite linear;
+    -webkit-animation: slideright 100s infinite linear;
+    max-width: 500px;
+   width: 100%;
+    z-index: +1;
+  }
+
+
+.btn {
+    background-color: #f03f57;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    top: 312px;
+    left: 200px;
+
+  
+}
+
+.gameover {
+    font-size: 50px;
+    color: black !important;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+
+}
